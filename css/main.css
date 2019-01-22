@@ -165,9 +165,9 @@ section.resume-section .resume-item .resume-date {
 }
 
 a {
-  color: #E5E5E5;
+  color: #343a40;
 }
 
 a:hover, a:focus, a:active {
-  color: #343a40;
+  color: #212529;
 }

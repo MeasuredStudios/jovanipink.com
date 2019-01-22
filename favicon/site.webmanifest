@@ -1,6 +1,8 @@
 {
-    "name": "",
-    "short_name": "",
+    "version": "1.0.0",
+    "name": "Jovani Pink",
+    "short_name": "Jovani Pink",
+    "description": "Personal Web Site for Jovani Pink.",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -15,5 +17,21 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "display": "standalone"
+    "display": "standalone",
+    "developer": {
+        "name": "Jovani Pink",
+        "url": "https://www.jovanipink.com/"
+    },
+    "installs_allowed_from": [
+        "*"
+    ],
+    "default_locale": "en",
+    "permissions": {},
+    "locales": {
+        "en": {
+            "name": "Jovani Pink",
+            "description": "Personal Web Site for Jovani Pink."
+        }
+    },
+    "start_url": "/index.html"
 }
