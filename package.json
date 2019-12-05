@@ -25,17 +25,17 @@
     "react-dom": "16.10.2",
     "prop-types": "15.7.2",
     "react-helmet": "5.2.1",
-    "gatsby": "2.17.0",
-    "gatsby-plugin-react-helmet": "3.1.13",
-    "gatsby-plugin-sass": "2.1.20",
+    "gatsby": "2.18.7",
+    "gatsby-plugin-react-helmet": "3.1.16",
+    "gatsby-plugin-sass": "2.1.24",
     "node-sass": "4.12.0",
-    "gatsby-plugin-manifest": "2.2.23",
-    "gatsby-plugin-offline": "3.0.16",
-    "gatsby-plugin-sitemap": "2.2.19",
+    "gatsby-plugin-manifest": "2.2.31",
+    "gatsby-plugin-offline": "3.0.27",
+    "gatsby-plugin-sitemap": "2.2.22",
     "gatsby-plugin-facebook-pixel": "1.0.3",
-    "gatsby-plugin-google-analytics": "2.1.23",
+    "gatsby-plugin-google-analytics": "2.1.29",
     "gatsby-plugin-robots-txt": "1.5.0",
-    "gatsby-plugin-netlify": "2.1.22"
+    "gatsby-plugin-netlify": "2.1.27"
   },
   "devDependencies": {
     "prettier": "1.18.2"
