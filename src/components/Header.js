@@ -1,18 +1,22 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 
 const Header = (props) => (
-    <header id="header" className="alt">
-        <Link to="/" className="logo"><strong>MEASURED STUDIOS</strong></Link>
-        <nav>
-            <a className="menu-link" onClick={props.onToggleMenu} href="javascript:;">Menu</a>
-        </nav>
-    </header>
-)
+  <header id="header" className="alt">
+    <Link to="/" className="logo">
+      <strong>JOVANI PINK</strong>
+    </Link>
+    <nav>
+      <a className="menu-link" onClick={props.onToggleMenu} href="javascript:;">
+        Menu
+      </a>
+    </nav>
+  </header>
+);
 
 Header.propTypes = {
-    onToggleMenu: PropTypes.func
-}
+  onToggleMenu: PropTypes.func,
+};
 
-export default Header
+export default Header;

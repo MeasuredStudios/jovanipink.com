@@ -6,11 +6,13 @@ module.exports = {
     keywords:
       'JovaniPink, Jovani Pink, Product Manager, product development, product owner, product management, project management, scrum, agile, product marketing​',
     siteUrl: 'https://www.jovanipink.com',
+    social: {
+      twitter: `JovaniPink`,
+    },
   },
   plugins: [
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-offline',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -21,7 +23,7 @@ module.exports = {
         background_color: '#f9f9f9',
         theme_color: '#242943',
         display: 'standalone',
-        icon: 'src/assets/favicon/website-icon.png',
+        icon: './src/assets/favicon/project-logo.jpg',
         icons: [
           {
             src: '/android-icon-36x36.png',
@@ -90,11 +92,13 @@ module.exports = {
         pixelId: '',
       },
     },
+    'gatsby-plugin-offline',
     // make sure to put last in the array
     {
       resolve: `gatsby-plugin-netlify`,
       options: {
-        headers: {}, // option to add more headers. `Link` headers are transformed by the below criteria
+        headers: {
+          '/*': ['Strict-Transport-Security: max-age=63072000'],}, // option to add more headers. `Link` headers are transformed by the below criteria
         allPageHeaders: [], // option to add headers for all pages. `Link` headers are transformed by the below criteria
         mergeSecurityHeaders: true, // boolean to turn off the default security headers
         mergeLinkHeaders: true, // boolean to turn off the default gatsby js headers

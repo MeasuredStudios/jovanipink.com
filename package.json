@@ -5,7 +5,11 @@
   "private": true,
   "description": "Jovani Pink's Personal Website.",
   "keywords": [
-    ""
+    "Jovani Pink",
+    "Developer",
+    "Builder",
+    "JavaScript",
+    "Typescript"
   ],
   "license": "MIT",
   "repository": {
@@ -20,6 +24,15 @@
   "contributors": [
     "Jovani Pink (https://www.jovanipink.com/)"
   ],
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
   "dependencies": {
     "react": "16.12.0",
     "react-dom": "16.12.0",
@@ -27,6 +40,8 @@
     "react-helmet": "5.2.1",
     "gatsby": "2.19.12",
     "gatsby-plugin-react-helmet": "3.1.22",
+    "gatsby-link": "2.2.29",
+    "gatsby-image": "2.2.39",
     "gatsby-plugin-sass": "2.1.28",
     "node-sass": "4.13.1",
     "gatsby-plugin-manifest": "2.2.41",
@@ -38,16 +53,43 @@
     "gatsby-plugin-netlify": "2.1.32"
   },
   "devDependencies": {
-    "prettier": "1.19.1"
-  },
-  "scripts": {
-    "build": "gatsby build",
-    "dev": "gatsby develop",
-    "clean": "gatsby clean",
-    "format": "prettier --write '**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "@types/node": "13.7.1",
+    "@types/react": "16.9.19",
+    "@types/react-dom": "16.9.5",
+    "@types/prop-types": "15.7.3",
+    "@types/react-helmet": "5.0.15",
+    "@types/babel-core": "6.25.6",
+    "@types/jest": "25.1.2",
+    "@types/eslint": "6.1.8",
+    "@types/prettier": "1.19.0",
+    "@types/stylelint": "9.10.1",
+    "@types/eslint-plugin-prettier": "2.2.0",
+    "@testing-library/jest-dom": "4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/react-hooks": "^3.2.1",
+    "@testing-library/user-event": "7.2.1",
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "@typescript-eslint/parser": "^2.19.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-typescript": "^7.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jest": "^23.7.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "eslint-plugin-simple-import-sort": "^5.0.1",
+    "eslint-plugin-testing-library": "^2.2.3",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "jest-emotion": "^10.0.27",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1",
+    "react-test-renderer": "^16.12.0",
+    "ts-jest": "^25.2.0"
   },
   "engines": {
-    "node": ">= 8.0"
+    "node": ">= 10.19.0"
   }
 }

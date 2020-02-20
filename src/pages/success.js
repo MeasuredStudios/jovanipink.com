@@ -4,7 +4,7 @@ import Layout from '../components/layout';
 
 import pic11 from '../assets/images/pic11.jpg';
 
-const Success = props => (
+const Success = (props) => (
   <Layout>
     <Helmet>
       <html lang="en" />

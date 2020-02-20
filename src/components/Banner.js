@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Banner = props => (
+const Banner = (props) => (
   <section id="banner" className="major">
     <div className="inner">
       <header className="major">
@@ -8,14 +8,15 @@ const Banner = props => (
       </header>
       <div className="content">
         <p>
-          EMPOWERING people by sharing knowledge through personal connections
-          and in bringing value towards a better future... specialize in PRODUCT
-          DEVELOPMENT.
+          Believer, Husband, Father, and Collaborator. I passionately
+          <br />
+          create digital products and help people do the same @MeasuredStudios.
+          Product Management. JavaScript. TypeScript.
         </p>
         <ul className="actions">
           <li>
-            <a href="#contact" className="button special next scrolly">
-              Contact
+            <a href="#one" className="button next scrolly">
+              More
             </a>
           </li>
         </ul>

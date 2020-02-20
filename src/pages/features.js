@@ -2,21 +2,21 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Helmet from 'react-helmet';
 import Layout from '../components/layout';
-import BannerFeatures from '../components/BannerFeatures';
+import BannerAbout from '../components/BannerAbout';
 
 import pic08 from '../assets/images/pic08.jpg';
 import pic09 from '../assets/images/pic09.jpg';
 import pic10 from '../assets/images/pic10.jpg';
 
-const Features = props => (
+const About = props => (
   <Layout>
     <Helmet>
       <html lang="en" />
-      <title>Features</title>
-      <meta name="description" content="Features Page" />
+      <title>About</title>
+      <meta name="description" content="About Page" />
     </Helmet>
 
-    <BannerFeatures />
+    <BannerAbout />
 
     <div id="main">
       <section id="one">
@@ -119,4 +119,4 @@ const Features = props => (
   </Layout>
 );
 
-export default Features;
+export default About;

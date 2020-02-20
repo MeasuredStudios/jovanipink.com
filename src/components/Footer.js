@@ -1,80 +1,69 @@
 import React from 'react';
 
-const Footer = props => (
+const Footer = (props) => (
   <footer id="footer">
     <div className="inner">
       <ul className="icons">
         <li>
           <a
-            href="https://twitter.com/MeasuredStudios"
+            href="#"
             className="icon alt fa-twitter"
+            rel="noopener"
+            rel="noreferrer"
             target="_blank"
-            rel="noopener noreferrer"
           >
             <span className="label">Twitter</span>
           </a>
         </li>
         <li>
           <a
-            href="https://www.facebook.com/MeasuredStudios/"
+            href="#"
             className="icon alt fa-facebook"
+            rel="noopener"
+            rel="noreferrer"
             target="_blank"
-            rel="noopener noreferrer"
           >
             <span className="label">Facebook</span>
           </a>
         </li>
         <li>
           <a
-            href="https://www.instagram.com/measuredstudios/"
+            href="#"
             className="icon alt fa-instagram"
+            rel="noopener"
+            rel="noreferrer"
             target="_blank"
-            rel="noopener noreferrer"
           >
             <span className="label">Instagram</span>
           </a>
         </li>
         <li>
           <a
-            href="https://github.com/MEASUREDSTUDIOS"
+            href="#"
             className="icon alt fa-github"
+            rel="noopener"
+            rel="noreferrer"
             target="_blank"
-            rel="noopener noreferrer"
           >
             <span className="label">GitHub</span>
           </a>
         </li>
         <li>
           <a
-            href="https://www.linkedin.com/company/measuredstudios"
+            href="#"
             className="icon alt fa-linkedin"
+            rel="noopener"
+            rel="noreferrer"
             target="_blank"
-            rel="noopener noreferrer"
           >
             <span className="label">LinkedIn</span>
           </a>
         </li>
       </ul>
       <ul className="copyright">
+        <li>&copy; Jovani Pink</li>
         <li>
-          <a
-            href="https://www.jovanipink.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Jovani Pink
-          </a>{' '}
-          made it with love!
-        </li>
-        <li>&copy; Measured Studios LLC</li>
-        <li>
-          <a href="" target="_blank" rel="noopener noreferrer">
-            Terms
-          </a>{' '}
-          |{' '}
-          <a href="" target="_blank" rel="noopener noreferrer">
-            Privacy
-          </a>
+          Design: <a href="https://html5up.net">HTML5 UP</a>
         </li>
       </ul>
     </div>

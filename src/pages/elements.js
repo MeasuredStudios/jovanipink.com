@@ -7,11 +7,10 @@ import pic08 from '../assets/images/pic08.jpg';
 import pic09 from '../assets/images/pic09.jpg';
 import pic10 from '../assets/images/pic10.jpg';
 
-const Elements = props => (
+const Elements = (props) => (
   <Layout>
     <Helmet>
-      <html lang="en" />
-      <title>Elements</title>
+      <title>Elements - Forty by HTML5 UP</title>
       <meta name="description" content="Elements Page" />
     </Helmet>
 
@@ -405,7 +404,7 @@ const Elements = props => (
                   </tbody>
                   <tfoot>
                     <tr>
-                      <td colSpan="2" />
+                      <td colSpan="2"></td>
                       <td>100.00</td>
                     </tr>
                   </tfoot>
@@ -451,7 +450,7 @@ const Elements = props => (
                   </tbody>
                   <tfoot>
                     <tr>
-                      <td colSpan="2" />
+                      <td colSpan="2"></td>
                       <td>100.00</td>
                     </tr>
                   </tfoot>
@@ -643,7 +642,7 @@ const Elements = props => (
                         id="demo-message"
                         placeholder="Enter your message"
                         rows="6"
-                      />
+                      ></textarea>
                     </div>
                   </div>
                   <div className="col-12">

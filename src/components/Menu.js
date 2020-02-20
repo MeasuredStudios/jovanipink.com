@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
-const Menu = props => (
+const Menu = (props) => (
   <nav id="menu">
     <div className="inner">
       <ul className="links">
@@ -12,30 +12,24 @@ const Menu = props => (
           </Link>
         </li>
         <li>
-          <Link onClick={props.onToggleMenu} to="/features">
-            Features
+          <Link onClick={props.onToggleMenu} to="/about">
+            About
           </Link>
         </li>
         <li>
-          <Link onClick={props.onToggleMenu} to="/agency">
-            Agency
+          <Link onClick={props.onToggleMenu} to="/skills">
+            Skills
           </Link>
         </li>
-      </ul>
-      <ul className="actions vertical">
         <li>
-          <a
-            href="/#contact"
-            className="button special fit"
-            onClick={props.onToggleMenu}
-          >
-            Join The Beta
-          </a>
+          <Link onClick={props.onToggleMenu} to="/projects">
+            Projects
+          </Link>
         </li>
         <li>
-          <a href="#" className="button fit">
-            Log In
-          </a>
+          <Link onClick={props.onToggleMenu} to="/community">
+            Community
+          </Link>
         </li>
       </ul>
     </div>
