@@ -25,7 +25,7 @@
     "react-dom": "16.13.0",
     "prop-types": "15.7.2",
     "react-helmet": "5.2.1",
-    "gatsby": "2.19.22",
+    "gatsby": "2.19.24",
     "gatsby-plugin-react-helmet": "3.1.22",
     "gatsby-plugin-sass": "2.1.29",
     "node-sass": "4.13.1",
