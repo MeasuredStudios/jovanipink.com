@@ -8,9 +8,11 @@ const BannerAbout = (props) => (
       </header>
       <div className="content">
         <p>
-          Lorem ipsum dolor sit amet nullam consequat
+          Hi my name is Jovani and I am just a person who believes:
           <br />
-          sed veroeros. tempus adipiscing nulla.
+          my words and actions contribute to a better future.
+          <br />
+          Cheers!
         </p>
       </div>
     </div>

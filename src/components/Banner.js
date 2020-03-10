@@ -7,11 +7,9 @@ const Banner = (props) => (
         <h1>Jovani Pink</h1>
       </header>
       <div className="content">
-        <p>
-          Believer, Husband, Father, and Collaborator. I passionately
+        <p>Believer, Husband, Father, and Collaborator/Maverick.
           <br />
-          create digital products and help people do the same @MeasuredStudios.
-          Product Management. JavaScript. TypeScript.
+          I create code @MeasuredStudios with JavaScript && TypeScript!
         </p>
         <ul className="actions">
           <li>

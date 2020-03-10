@@ -4,18 +4,18 @@ import Layout from '../components/layout';
 
 import pic11 from '../assets/images/pic11.jpg';
 
-const Skills = (props) => (
+const Empowerment = (props) => (
   <Layout>
     <Helmet>
-      <title>Jovani's Skills</title>
-      <meta name="description" content="Skill Page" />
+      <title>Jovani's Empowerment Process</title>
+      <meta name="description" content="Empowerment Page" />
     </Helmet>
 
     <div id="main" className="alt">
       <section id="one">
         <div className="inner">
           <header className="major">
-            <h1>Skills</h1>
+            <h1>Empowerment</h1>
           </header>
           <span className="image main">
             <img src={pic11} alt="" />
@@ -29,4 +29,4 @@ const Skills = (props) => (
   </Layout>
 );
 
-export default Skills;
+export default Empowerment;

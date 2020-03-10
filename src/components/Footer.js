@@ -6,7 +6,7 @@ const Footer = (props) => (
       <ul className="icons">
         <li>
           <a
-            href="#"
+            href="https://twitter.com/JovaniPink"
             className="icon alt fa-twitter"
             rel="noopener"
             rel="noreferrer"
@@ -17,7 +17,7 @@ const Footer = (props) => (
         </li>
         <li>
           <a
-            href="#"
+            href="https://www.facebook.com/JOVANIPINK"
             className="icon alt fa-facebook"
             rel="noopener"
             rel="noreferrer"
@@ -28,7 +28,7 @@ const Footer = (props) => (
         </li>
         <li>
           <a
-            href="#"
+            href="https://www.instagram.com/jovanipink/"
             className="icon alt fa-instagram"
             rel="noopener"
             rel="noreferrer"
@@ -39,7 +39,7 @@ const Footer = (props) => (
         </li>
         <li>
           <a
-            href="#"
+            href="https://github.com/JovaniPink"
             className="icon alt fa-github"
             rel="noopener"
             rel="noreferrer"
@@ -50,7 +50,7 @@ const Footer = (props) => (
         </li>
         <li>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/jovanipink/"
             className="icon alt fa-linkedin"
             rel="noopener"
             rel="noreferrer"
@@ -63,7 +63,14 @@ const Footer = (props) => (
       <ul className="copyright">
         <li>&copy; Jovani Pink</li>
         <li>
-          Design: <a href="https://html5up.net">HTML5 UP</a>
+          Design: <a href="https://html5up.net" rel="noopener"
+            rel="noreferrer"
+            target="_blank">HTML5 UP</a>
+        </li>
+        <li>
+          Images: <a href="https://unsplash.com/" rel="noopener"
+            rel="noreferrer"
+            target="_blank">Unsplash</a>
         </li>
       </ul>
     </div>

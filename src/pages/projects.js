@@ -2,58 +2,44 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Helmet from 'react-helmet';
 import Layout from '../components/layout';
-import BannerLanding from '../components/BannerLanding';
+import BannerProjects from '../components/BannerProjects';
 
 import pic08 from '../assets/images/pic08.jpg';
 import pic09 from '../assets/images/pic09.jpg';
 import pic10 from '../assets/images/pic10.jpg';
 
-const Landing = (props) => (
+const Projects = (props) => (
   <Layout>
     <Helmet>
-      <title>Landing - Forty by HTML5 UP</title>
-      <meta name="description" content="Landing Page" />
+      <title>Jovani's Projects</title>
+      <meta name="description" content="Projects Page" />
     </Helmet>
 
-    <BannerLanding />
+    <BannerProjects />
 
     <div id="main">
       <section id="one">
         <div className="inner">
           <header className="major">
-            <h2>Sed amet aliquam</h2>
+            <h2>Measured Studios</h2>
           </header>
-          <p>
-            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-            magna sed nunc rhoncus condimentum sem. In efficitur ligula tate
-            urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor.
-            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
-            libero. Nullam et orci eu lorem consequat tincidunt vivamus et
-            sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula
-            tate urna.
-          </p>
+          <p>More info to come.</p>
         </div>
       </section>
       <section id="two" className="spotlights">
         <section>
-          <Link to="/generic" className="image">
+          <Link to="" className="image">
             <img src={pic08} alt="" />
           </Link>
           <div className="content">
             <div className="inner">
               <header className="major">
-                <h3>Orci maecenas</h3>
+                <h3>Swigged</h3>
               </header>
-              <p>
-                Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-                magna sed nunc rhoncus condimentum sem. In efficitur ligula tate
-                urna. Maecenas massa sed magna lacinia magna pellentesque lorem
-                ipsum dolor. Nullam et orci eu lorem consequat tincidunt.
-                Vivamus et sagittis tempus.
-              </p>
+              <p>More info to come.</p>
               <ul className="actions">
                 <li>
-                  <Link to="/generic" className="button">
+                  <Link to="" className="button">
                     Learn more
                   </Link>
                 </li>
@@ -62,24 +48,18 @@ const Landing = (props) => (
           </div>
         </section>
         <section>
-          <Link to="/generic" className="image">
+          <Link to="" className="image">
             <img src={pic09} alt="" />
           </Link>
           <div className="content">
             <div className="inner">
               <header className="major">
-                <h3>Rhoncus magna</h3>
+                <h3>AIDA.Solutions</h3>
               </header>
-              <p>
-                Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-                magna sed nunc rhoncus condimentum sem. In efficitur ligula tate
-                urna. Maecenas massa sed magna lacinia magna pellentesque lorem
-                ipsum dolor. Nullam et orci eu lorem consequat tincidunt.
-                Vivamus et sagittis tempus.
-              </p>
+              <p>More info to come.</p>
               <ul className="actions">
                 <li>
-                  <Link to="/generic" className="button">
+                  <Link to="" className="button">
                     Learn more
                   </Link>
                 </li>
@@ -88,24 +68,18 @@ const Landing = (props) => (
           </div>
         </section>
         <section>
-          <Link to="/generic" className="image">
+          <Link to="" className="image">
             <img src={pic10} alt="" />
           </Link>
           <div className="content">
             <div className="inner">
               <header className="major">
-                <h3>Sed nunc ligula</h3>
+                <h3>Jovi</h3>
               </header>
-              <p>
-                Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-                magna sed nunc rhoncus condimentum sem. In efficitur ligula tate
-                urna. Maecenas massa sed magna lacinia magna pellentesque lorem
-                ipsum dolor. Nullam et orci eu lorem consequat tincidunt.
-                Vivamus et sagittis tempus.
-              </p>
+              <p>More info to come.</p>
               <ul className="actions">
                 <li>
-                  <Link to="/generic" className="button">
+                  <Link to="" className="button">
                     Learn more
                   </Link>
                 </li>
@@ -118,4 +92,4 @@ const Landing = (props) => (
   </Layout>
 );
 
-export default Landing;
+export default Projects;
