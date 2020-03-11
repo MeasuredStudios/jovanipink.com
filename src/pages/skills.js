@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import Layout from '../components/layout';
 
-import pic11 from '../assets/images/pic11.jpg';
+import pic03 from '../assets/images/pic03.jpg';
 
 const Skills = (props) => (
   <Layout>
@@ -18,7 +18,7 @@ const Skills = (props) => (
             <h1>Skills</h1>
           </header>
           <span className="image main">
-            <img src={pic11} alt="" />
+            <img src={pic03} alt="" />
           </span>
           <p>
             Coming Soon.

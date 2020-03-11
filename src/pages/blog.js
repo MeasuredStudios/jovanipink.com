@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import Layout from '../components/layout';
 
-import pic11 from '../assets/images/pic11.jpg';
+import pic01 from '../assets/images/pic01.jpg';
 
 const Blog = (props) => (
   <Layout>
@@ -19,7 +19,7 @@ const Blog = (props) => (
             <h1>Blog</h1>
           </header>
           <span className="image main">
-            <img src={pic11} alt="" />
+            <img src={pic01} alt="" />
           </span>
           <p>
             Coming Soon.

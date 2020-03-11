@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import Layout from '../components/layout';
 
-import pic11 from '../assets/images/pic11.jpg';
+import pic05 from '../assets/images/pic05.jpg';
 
 const Community = (props) => (
   <Layout>
@@ -18,7 +18,7 @@ const Community = (props) => (
             <h1>Community</h1>
           </header>
           <span className="image main">
-            <img src={pic11} alt="" />
+            <img src={pic05} alt="" />
           </span>
           <p>
             Coming Soon.
