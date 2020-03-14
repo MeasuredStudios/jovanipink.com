@@ -86,12 +86,6 @@ module.exports = {
         cookieDomain: 'jovanipink.com',
       },
     },
-    {
-      resolve: `gatsby-plugin-facebook-pixel`,
-      options: {
-        pixelId: '',
-      },
-    },
     'gatsby-plugin-offline',
     // make sure to put last in the array
     {
