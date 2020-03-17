@@ -8,6 +8,22 @@ const NotFoundPage = () => (
         <div className="inner">
           <h1>NOT FOUND</h1>
           <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+          <ul className="actions">
+          <li>
+            <Link to="/community" className="button next scrolly">
+              Home
+            </Link>
+          </li>
+          <li>
+            <a href="https://www.measuredstudios.com/"
+                    className="button next"
+                    rel="noopener"
+                    rel="noreferrer"
+                    target="_blank" className="button next scrolly">
+              Measured Studios
+            </a>
+          </li>
+        </ul>
         </div>
       </section>
     </div>
