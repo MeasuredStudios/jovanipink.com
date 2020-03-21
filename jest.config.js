@@ -1,5 +1,4 @@
 module.exports = {
-  preset: 'ts-jest',
+  preset: 'jest',
   rootDir: 'src',
-  snapshotSerializers: ['jest-emotion'],
 };

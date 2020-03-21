@@ -61,7 +61,9 @@ const Footer = (props) => (
         </li>
       </ul>
       <ul className="copyright">
-        <li>&copy; Jovani Pink</li>
+        <li>&copy;: <a href="https://www.measuredstudios.com/" rel="noopener"
+            rel="noreferrer"
+            target="_blank">Measured Studios</a></li>
         <li>
           Design: <a href="https://html5up.net" rel="noopener"
             rel="noreferrer"
