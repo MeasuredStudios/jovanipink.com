@@ -77,7 +77,7 @@ class HomeIndex extends React.Component {
           <section id="two">
             <div className="inner">
               <header className="major">
-                <h2>Measured Studios</h2>
+                <h2>MEASURED STUDIOS</h2>
               </header>
               <p>
                 My passion is Measured Studios, a platform for product managers.
