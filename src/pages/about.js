@@ -87,7 +87,7 @@ const About = (props) => (
               </p>
               <ul className="actions">
                 <li>
-                  <Link to="/generic" className="button">
+                  <Link to="" className="button">
                     Learn more
                   </Link>
                 </li>
@@ -96,7 +96,7 @@ const About = (props) => (
           </div>
         </section>
         <section>
-          <Link to="/generic" className="image">
+          <Link to="" className="image">
             <img src={pic10} alt="" />
           </Link>
           <div className="content">
