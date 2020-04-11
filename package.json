@@ -30,7 +30,7 @@
     "react-dom": "16.13.1",
     "prop-types": "15.7.2",
     "react-helmet": "6.0.0",
-    "gatsby": "2.20.17",
+    "gatsby": "2.20.18",
     "gatsby-image": "2.3.2",
     "gatsby-link": "2.3.2",
     "gatsby-plugin-sass": "2.2.1",
