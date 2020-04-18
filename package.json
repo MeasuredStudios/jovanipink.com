@@ -75,7 +75,7 @@
     "@testing-library/user-event": "10.0.2",
     "react-test-renderer": "16.13.1",
     "husky": "4.2.5",
-    "lint-staged": "10.1.4"
+    "lint-staged": "10.1.5"
   },
   "scripts": {
     "build": "gatsby build",
