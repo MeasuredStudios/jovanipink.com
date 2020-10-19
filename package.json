@@ -70,7 +70,7 @@
     "eslint-plugin-testing-library": "3.9.1",
     "jest": "26.5.3",
     "@testing-library/jest-dom": "5.11.4",
-    "@testing-library/react": "11.0.4",
+    "@testing-library/react": "11.1.0",
     "@testing-library/react-hooks": "3.4.2",
     "@testing-library/user-event": "12.1.7",
     "react-test-renderer": "16.13.1",
