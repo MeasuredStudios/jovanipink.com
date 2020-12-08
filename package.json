@@ -51,7 +51,7 @@
     "@types/react-dom": "17.0.0",
     "@types/prop-types": "15.7.3",
     "@types/react-helmet": "6.1.0",
-    "@types/jest": "26.0.16",
+    "@types/jest": "26.0.17",
     "@types/eslint": "7.2.6",
     "@types/prettier": "2.1.5",
     "@types/eslint-plugin-prettier": "3.1.0",
