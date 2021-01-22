@@ -1,40 +1,25 @@
-<img src="project-logo.jpg" align="left" width="192px" height="192px"/>
-<img align="left" width="0" height="192px" hspace="10"/>
-
 # Jovani Pink
 
-> Personal Web Site
+> I'm @JOVANIPINK and I Tweet, Blog, and Vlog my thoughts on things I find awesome ... Let's Talk and Think Together ... This is my personal website.
 
-## About
+This is a personal website / blog using [Gatsby](https://www.gatsbyjs.org/), [Markdown](https://www.markdownguide.org/), [Typescript](https://www.typescriptlang.org/), [Styled Components](https://styled-components.com/), [Talwind CSS](https://tailwindcss.com/), [Framer Motion](https://www.framer.com/motion/) & [React Font Awesome](https://github.com/FortAwesome/react-fontawesome/).
 
-Gatsby.js V2 starter based on the Forty site template, designed by HTML5 UP. Check out https://codebushi.com/gatsby-starters-and-themes/ for more Gatsby starters and templates.
+## Demo
 
-## Folder Structure
+[jovanipink.com](https://www.jovanipink.com/)
 
-## Installation
+## Todo Checklist
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-<br/>
-`gatsby new gatsby-starter-forty https://github.com/codebushi/gatsby-starter-forty`
+A helpful checklist to gauge how your README is coming on what I would like to finish:
 
-Run `gatsby develop` in the terminal to start the dev site.
+- [ ] Lots of items! :)
 
-## CSS Grid
+## Contributing
 
-The grid on this site was replaced with a custom version, built using CSS Grid. It's a very simple 12 column grid that is disabled on mobile. To start using the grid, wrap the desired items with `grid-wrapper`. Items inside the `grid-wrapper` use the class `col-` followed by a number, which should add up to 12.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Here is an example of using the grid, for a 3 column layout:
+Please make sure to update tests as appropriate.
 
-```
-<div className="grid-wrapper">
-    <div className="col-4">
-        <p>Content Here</p>
-    </div>
-    <div className="col-4">
-        <p>Content Here</p>
-    </div>
-    <div className="col-4">
-        <p>Content Here</p>
-    </div>
-</div>
-```
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)

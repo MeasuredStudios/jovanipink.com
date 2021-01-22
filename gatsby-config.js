@@ -4,36 +4,57 @@ module.exports = {
     author: 'Jovani Pink',
     description: "Jovani Pink's Personal Website.",
     keywords:
-      'JovaniPink, Jovani Pink, Product Manager, product development, product owner, product management, project management, scrum, agile, product marketing​',
+      'JovaniPink, Jovani Pink, Product Manager, Product Development, Product Owner, Product Management, Product Marketing, Project Management, Scrum, Agile​',
     siteUrl: 'https://www.jovanipink.com',
     social: {
       twitter: `JovaniPink`,
     },
   },
+  flags: { DEV_SSR: true },
   plugins: [
-    'gatsby-plugin-sass',
-    'gatsby-plugin-react-helmet',
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `data`,
-        path: `${__dirname}/src/data/`,
-        ignore: [`**/\.*`], // ignore files starting with a dot
-      },
+        name: `images`,
+        path: `${__dirname}/src/assets/images`
+      }
     },
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/data`
+      }
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 768,
+              linkImagesToOriginal: false
+            }
+          }
+        ]
+      }
+    },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'Jovani Pink',
-        short_name: 'Pink',
+        short_name: 'Jovani Pink',
         description: "Jovani Pink's Personal Website.",
         start_url: '/',
         background_color: '#f9f9f9',
         theme_color: '#242943',
-        display: 'standalone',
-        icon: './src/assets/favicon/project-logo.jpg',
+        display: 'minimal-ui',
+        icon: './static/favicon/project-logo.jpg',
         icons: [
           {
             src: '/android-icon-36x36.png',
@@ -74,17 +95,17 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-sitemap`,
-    },
-    {
-      resolve: `gatsby-plugin-robots-txt`,
-      options: {
-        host: 'https://www.jovanipink.com',
-        sitemap: 'https://www.jovanipink.com/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }],
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-sitemap`,
+    // },
+    // {
+    //   resolve: `gatsby-plugin-robots-txt`,
+    //   options: {
+    //     host: 'https://www.jovanipink.com',
+    //     sitemap: 'https://www.jovanipink.com/sitemap.xml',
+    //     policy: [{ userAgent: '*', allow: '/' }],
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -96,8 +117,17 @@ module.exports = {
         cookieDomain: 'jovanipink.com',
       },
     },
-    'gatsby-plugin-offline',
-    // make sure to put last in the array
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-tailwindcss`,
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        tailwind: true,
+        purgeOnly: [`src/assets/styles/global.css`]
+      }
+    },
     {
       resolve: `gatsby-plugin-netlify`,
       options: {
@@ -112,5 +142,5 @@ module.exports = {
         generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
       },
     },
-  ],
+  ]
 };
