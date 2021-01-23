@@ -57,7 +57,7 @@ module.exports = {
         icon: './static/favicon/project-logo.jpg',
         icons: [
           {
-            src: '/android-icon-36x36.png',
+            src: '/favicon/android-icon-36x36.png',
             sizes: '36x36',
             type: 'image/png',
             density: '0.75',
@@ -95,17 +95,17 @@ module.exports = {
         ],
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-sitemap`,
-    // },
-    // {
-    //   resolve: `gatsby-plugin-robots-txt`,
-    //   options: {
-    //     host: 'https://www.jovanipink.com',
-    //     sitemap: 'https://www.jovanipink.com/sitemap.xml',
-    //     policy: [{ userAgent: '*', allow: '/' }],
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+    },
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: 'https://www.jovanipink.com',
+        sitemap: 'https://www.jovanipink.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

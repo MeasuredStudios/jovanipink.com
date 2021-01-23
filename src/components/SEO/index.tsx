@@ -26,8 +26,12 @@ const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
         site {
           siteMetadata {
             title
+            siteUrl
             description
             author
+            social {
+              twitter
+            }
           }
         }
       }
@@ -51,6 +55,10 @@ const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
         {
           property: `og:title`,
           content: title
+        },
+        {
+          property: `og:url`,
+          content: "https://www.jovanipink.com",
         },
         {
           property: `og:description`,
