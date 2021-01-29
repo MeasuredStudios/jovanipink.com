@@ -19,5 +19,5 @@
     }
   },
   "exclude": ["node_modules"],
-  "include": ["./src/**/*", "@types"]
+  "include": ["tailwind.macro.d.ts", "./src/**/*"]
 }
