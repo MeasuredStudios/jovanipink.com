@@ -1,8 +1,8 @@
 ---
 category: 'projects'
 cover: './testimonial-1.jpg'
-title: 'Orlando Service Relief'
+title: 'My Why'
 link: 'https://www.orlandoservicerelief.com/'
 ---
 
-A directory of resources for Orlando bars, venues, restaurants, and service businesses that can use our help to support their staff during the state-mandated shutdown.
+I believe in EMPOWERING people by sharing knowledge through personal connections and in bringing value for a better future.

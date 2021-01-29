@@ -10,20 +10,20 @@ interface MainNavItem {
 const mainNavItems: MainNavItem[] = [
   {
     title: 'About Me',
-    slug: '/'
+    slug: '/',
   },
   {
     title: 'Resume',
-    slug: '/resume/'
+    slug: '/resume/',
   },
   {
     title: 'Blog',
-    slug: '/blog/'
+    slug: '/blog/',
   },
   {
     title: 'Contact Me',
-    slug: '/contact/'
-  }
+    slug: '/contact/',
+  },
 ];
 
 const MainNav: React.FC = () => {

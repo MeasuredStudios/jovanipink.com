@@ -1,6 +1,6 @@
 ---
 category: 'contact'
 title: 'LinkedIn'
-icon: 'fa-linkedin'
+icon: 'linkedin-in'
 content: 'linkedin.com/in/jovanipink/'
 ---

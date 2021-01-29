@@ -1,8 +1,8 @@
 ---
 category: 'projects'
 cover: './testimonial-2.jpg'
-title: 'Measured Studios'
+title: 'My What'
 link: 'https://www.measuredstudios.com/'
 ---
 
-Measured Studios takes on the pain of the design and development process to allow you to bring the greatest value to your targeted market as quickly as possible.
+I enjoy challenges and teamwork with a high interest in developing products, data analytics, and stories. I assist in creating quality reports and visualizations with D3.js and Tableau. I play with data in Excel, SQL, and Python.
