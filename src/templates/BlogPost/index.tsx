@@ -11,7 +11,7 @@ import FormatHtml from 'components/utils/FormatHtml';
 import * as Styled from './styles';
 
 interface Post {
-  html: React.ReactNode;
+  body: React.ReactNode;
   fields: {
     slug: string;
   };
@@ -23,7 +23,7 @@ interface Post {
 
 interface Props {
   data: {
-    markdownRemark: Post;
+    mdx: Post;
   };
   pageContext: {
     slug: string;
@@ -33,15 +33,18 @@ interface Props {
 }
 
 const BlogPost: React.FC<Props> = ({ data, pageContext }) => {
-  const post = data.markdownRemark;
+  const post = data.mdx;
   const { previous, next } = pageContext;
 
   return (
     <Layout>
       <SEO title={post.frontmatter.title} />
       <Container section>
-        <TitleSection title={post.frontmatter.date} subtitle={post.frontmatter.title} />
-        <FormatHtml content={post.html} />
+        <TitleSection
+          title={post.frontmatter.date}
+          subtitle={post.frontmatter.title}
+        />
+        <FormatHtml content={post.body} />
         <Styled.Links>
           <span>
             {previous && (
@@ -67,8 +70,8 @@ export default BlogPost;
 
 export const query = graphql`
   query BlogPostBySlug($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+    mdx(fields: { slug: { eq: $slug } }) {
+      body
       frontmatter {
         title
         date(formatString: "MMM DD, YYYY")

@@ -12,9 +12,9 @@ interface SectionHeroBanner extends SectionTitle {
 }
 
 const HeroBanner: React.FC = () => {
-  const { markdownRemark } = useStaticQuery(graphql`
+  const { mdx } = useStaticQuery(graphql`
     query {
-      markdownRemark(frontmatter: { category: { eq: "hero section" } }) {
+      mdx(frontmatter: { category: { eq: "hero section" } }) {
         frontmatter {
           title
           subtitle
@@ -26,7 +26,7 @@ const HeroBanner: React.FC = () => {
     }
   `);
 
-  const heroBanner: SectionHeroBanner = markdownRemark.frontmatter;
+  const heroBanner: SectionHeroBanner = mdx.frontmatter;
 
   return (
     <Banner

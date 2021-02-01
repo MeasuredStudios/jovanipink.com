@@ -22,15 +22,15 @@ interface Contact {
 }
 
 const ConctactInfo: React.FC = () => {
-  const { markdownRemark, allMarkdownRemark } = useStaticQuery(graphql`
+  const { mdx, allMdx } = useStaticQuery(graphql`
     query {
-      markdownRemark(frontmatter: { category: { eq: "contact section" } }) {
+      mdx(frontmatter: { category: { eq: "contact section" } }) {
         frontmatter {
           title
           subtitle
         }
       }
-      allMarkdownRemark(
+      allMdx(
         filter: { frontmatter: { category: { eq: "contact" } } }
         sort: { fields: fileAbsolutePath }
       ) {
@@ -48,8 +48,8 @@ const ConctactInfo: React.FC = () => {
     }
   `);
 
-  const sectionTitle: SectionTitle = markdownRemark.frontmatter;
-  const contacts: Contact[] = allMarkdownRemark.edges;
+  const sectionTitle: SectionTitle = mdx.frontmatter;
+  const contacts: Contact[] = allMdx.edges;
   const linkFix = ['fab', 'linkedin-in'];
 
   return (

@@ -32,15 +32,15 @@ interface Post {
 }
 
 const Posts: React.FC = () => {
-  const { markdownRemark, allMarkdownRemark } = useStaticQuery(graphql`
+  const { mdx, allMdx } = useStaticQuery(graphql`
     query {
-      markdownRemark(frontmatter: { category: { eq: "blog section" } }) {
+      mdx(frontmatter: { category: { eq: "blog section" } }) {
         frontmatter {
           title
           subtitle
         }
       }
-      allMarkdownRemark(
+      allMdx(
         filter: {
           frontmatter: { category: { eq: "blog" }, published: { eq: true } }
         }
@@ -49,7 +49,7 @@ const Posts: React.FC = () => {
         edges {
           node {
             id
-            html
+            body
             fields {
               slug
             }
@@ -72,8 +72,8 @@ const Posts: React.FC = () => {
     }
   `);
 
-  const sectionTitle: SectionTitle = markdownRemark.frontmatter;
-  const posts: Post[] = allMarkdownRemark.edges;
+  const sectionTitle: SectionTitle = mdx.frontmatter;
+  const posts: Post[] = allMdx.edges;
 
   return (
     <Container section>

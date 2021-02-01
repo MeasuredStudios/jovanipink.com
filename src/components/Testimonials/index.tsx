@@ -16,7 +16,7 @@ const Carousel = Loadable(() => import('components/ui/Carousel'));
 interface Testimonial {
   node: {
     id: string;
-    html: string;
+    body: string;
     frontmatter: {
       title: string;
       cover: {
@@ -29,19 +29,23 @@ interface Testimonial {
 }
 
 const Testimonials: React.FC = () => {
-  const { markdownRemark, allMarkdownRemark } = useStaticQuery(graphql`
+  const { mdx, allMdx } = useStaticQuery(graphql`
     query {
-      markdownRemark(frontmatter: { category: { eq: "testimonials section" } }) {
+      mdx(
+        frontmatter: { category: { eq: "testimonials section" } }
+      ) {
         frontmatter {
           title
           subtitle
         }
       }
-      allMarkdownRemark(filter: { frontmatter: { category: { eq: "testimonials" } } }) {
+      allMdx(
+        filter: { frontmatter: { category: { eq: "testimonials" } } }
+      ) {
         edges {
           node {
             id
-            html
+            body
             frontmatter {
               title
               cover {
@@ -58,19 +62,23 @@ const Testimonials: React.FC = () => {
     }
   `);
 
-  const sectionTitle: SectionTitle = markdownRemark.frontmatter;
-  const testimonials: Testimonial[] = allMarkdownRemark.edges;
+  const sectionTitle: SectionTitle = mdx.frontmatter;
+  const testimonials: Testimonial[] = allMdx.edges;
 
   return (
     <Container section>
-      <TitleSection title={sectionTitle.title} subtitle={sectionTitle.subtitle} center />
+      <TitleSection
+        title={sectionTitle.title}
+        subtitle={sectionTitle.subtitle}
+        center
+      />
       <Styled.Testimonials>
         <Carousel>
           {testimonials.map((item) => {
             const {
               id,
-              html,
-              frontmatter: { cover, title }
+              body,
+              frontmatter: { cover, title },
             } = item.node;
 
             return (
@@ -79,7 +87,7 @@ const Testimonials: React.FC = () => {
                   <Img fluid={cover.childImageSharp.fluid} alt={title} />
                 </Styled.Image>
                 <Styled.Title>{title}</Styled.Title>
-                <FormatHtml content={html} />
+                <FormatHtml content={body} />
               </Styled.Testimonial>
             );
           })}

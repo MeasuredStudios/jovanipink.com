@@ -11,7 +11,7 @@ import { SectionTitle } from 'helpers/definitions';
 interface Education {
   node: {
     id: string;
-    html: React.ReactNode;
+    body: React.ReactNode;
     frontmatter: {
       university: string;
       degree: string;
@@ -22,22 +22,22 @@ interface Education {
 }
 
 const Education: React.FC = () => {
-  const { markdownRemark, allMarkdownRemark } = useStaticQuery(graphql`
+  const { mdx, allMdx } = useStaticQuery(graphql`
     query {
-      markdownRemark(frontmatter: { category: { eq: "education section" } }) {
+      mdx(frontmatter: { category: { eq: "education section" } }) {
         frontmatter {
           title
           subtitle
         }
       }
-      allMarkdownRemark(
+      allMdx(
         filter: { frontmatter: { category: { eq: "education" } } }
         sort: { order: DESC, fields: fileAbsolutePath }
       ) {
         edges {
           node {
             id
-            html
+            body
             frontmatter {
               university
               degree
@@ -50,8 +50,8 @@ const Education: React.FC = () => {
     }
   `);
 
-  const sectionTitle: SectionTitle = markdownRemark.frontmatter;
-  const education: Education[] = allMarkdownRemark.edges;
+  const sectionTitle: SectionTitle = mdx.frontmatter;
+  const education: Education[] = allMdx.edges;
 
   return (
     <Container section>
@@ -60,7 +60,7 @@ const Education: React.FC = () => {
       {education.map((item) => {
         const {
           id,
-          html,
+          body,
           frontmatter: { university, degree, startDate, endDate }
         } = item.node;
 
@@ -69,7 +69,7 @@ const Education: React.FC = () => {
             key={id}
             title={university}
             subtitle={degree}
-            content={<FormatHtml content={html} />}
+            content={<FormatHtml content={body} />}
             startDate={startDate}
             endDate={endDate}
           />

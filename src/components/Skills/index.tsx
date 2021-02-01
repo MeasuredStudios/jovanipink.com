@@ -20,15 +20,15 @@ interface Skill {
 }
 
 const Skills: React.FC = () => {
-  const { markdownRemark, allMarkdownRemark } = useStaticQuery(graphql`
+  const { mdx, allMdx } = useStaticQuery(graphql`
     query {
-      markdownRemark(frontmatter: { category: { eq: "skills section" } }) {
+      mdx(frontmatter: { category: { eq: "skills section" } }) {
         frontmatter {
           title
           subtitle
         }
       }
-      allMarkdownRemark(filter: { frontmatter: { category: { eq: "skills" } } }, sort: { fields: fileAbsolutePath }) {
+      allMdx(filter: { frontmatter: { category: { eq: "skills" } } }, sort: { fields: fileAbsolutePath }) {
         edges {
           node {
             id
@@ -42,8 +42,8 @@ const Skills: React.FC = () => {
     }
   `);
 
-  const sectionTitle: SectionTitle = markdownRemark.frontmatter;
-  const skills: Skill[] = allMarkdownRemark.edges;
+  const sectionTitle: SectionTitle = mdx.frontmatter;
+  const skills: Skill[] = allMdx.edges;
 
   return (
     <Container section>

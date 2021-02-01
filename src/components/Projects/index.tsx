@@ -16,7 +16,7 @@ const Carousel = Loadable(() => import('components/ui/Carousel'));
 interface Project {
   node: {
     id: string;
-    html: string;
+    body: string;
     frontmatter: {
       title: string;
       cover: {
@@ -29,21 +29,21 @@ interface Project {
 }
 
 const Projects: React.FC = () => {
-  const { markdownRemark, allMarkdownRemark } = useStaticQuery(graphql`
+  const { mdx, allMdx } = useStaticQuery(graphql`
     query {
-      markdownRemark(frontmatter: { category: { eq: "projects section" } }) {
+      mdx(frontmatter: { category: { eq: "projects section" } }) {
         frontmatter {
           title
           subtitle
         }
       }
-      allMarkdownRemark(
+      allMdx(
         filter: { frontmatter: { category: { eq: "projects" } } }
       ) {
         edges {
           node {
             id
-            html
+            body
             frontmatter {
               title
               link
@@ -61,8 +61,8 @@ const Projects: React.FC = () => {
     }
   `);
 
-  const sectionTitle: SectionTitle = markdownRemark.frontmatter;
-  const testimonials: Project[] = allMarkdownRemark.edges;
+  const sectionTitle: SectionTitle = mdx.frontmatter;
+  const testimonials: Project[] = allMdx.edges;
 
   return (
     <Container section>
@@ -75,7 +75,7 @@ const Projects: React.FC = () => {
         {testimonials.map((item) => {
           const {
             id,
-            html,
+            body,
             frontmatter: { cover, title, link },
           } = item.node;
 
@@ -87,7 +87,7 @@ const Projects: React.FC = () => {
               <a href={link} rel="noopener noreferrer" target="_blank">
                 <Styled.Title>{title}</Styled.Title>
               </a>
-              <FormatHtml content={html} />
+              <FormatHtml content={body} />
             </Styled.Project>
           );
         })}
