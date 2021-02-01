@@ -17,17 +17,25 @@ interface Props {
   lang?: string;
   meta?: Meta[];
   title: string;
+  image?: string;
 }
 
-const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
+const BlogSEO: React.FC<Props> = ({
+  description,
+  lang,
+  meta,
+  title,
+  image,
+}) => {
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
             title
-            siteUrl
             description
+            siteUrl
+            keywords
             author
             social {
               twitter
@@ -53,12 +61,20 @@ const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
           content: metaDescription,
         },
         {
+          name: `keywords`,
+          content: site.siteMetadata.keywords.join(','),
+        },
+        {
+          'http-equiv': `content-language`,
+          content: `en-us`,
+        },
+        {
           property: `og:title`,
           content: title,
         },
         {
           property: `og:url`,
-          content: 'https://www.jovanipink.com',
+          content: `site.siteMetadata.siteUrl`,
         },
         {
           property: `og:description`,
@@ -73,8 +89,12 @@ const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
           content: `summary`,
         },
         {
+          name: `twitter:site`,
+          content: site.siteMetadata.social.twitter,
+        },
+        {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: site.siteMetadata.social.twitter,
         },
         {
           name: `twitter:title`,
@@ -84,15 +104,31 @@ const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta!)}
+      ]
+        .concat(
+          image
+            ? [
+                { property: 'og:image', content: image },
+                { name: 'twitter:image', content: image },
+              ]
+            : []
+        )
+        .concat(meta!)}
+      link={[
+        {
+          rel: `canonical`,
+          href: site.siteMetadata.siteUrl,
+        },
+      ]}
     />
   );
 };
 
-SEO.defaultProps = {
+BlogSEO.defaultProps = {
   lang: `en`,
   meta: [] as Meta[],
   description: ``,
+  image: `https://repository-images.githubusercontent.com/282072592/9a7d9900-5d63-11eb-8990-8d8e7c39f88d`,
 };
 
-export default SEO;
+export default BlogSEO;

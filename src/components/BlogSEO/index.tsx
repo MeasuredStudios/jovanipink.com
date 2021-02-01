@@ -17,9 +17,16 @@ interface Props {
   lang?: string;
   meta?: Meta[];
   title: string;
+  image?: string;
 }
 
-const BlogSEO: React.FC<Props> = ({ description, lang, meta, title }) => {
+const BlogSEO: React.FC<Props> = ({
+  description,
+  lang,
+  meta,
+  title,
+  image,
+}) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -53,12 +60,16 @@ const BlogSEO: React.FC<Props> = ({ description, lang, meta, title }) => {
           content: metaDescription,
         },
         {
+          name: `description`,
+          content: metaDescription,
+        },
+        {
           property: `og:title`,
           content: title,
         },
         {
           property: `og:url`,
-          content: 'https://www.jovanipink.com',
+          content: `site.siteMetadata.siteUrl`,
         },
         {
           property: `og:description`,
@@ -84,7 +95,22 @@ const BlogSEO: React.FC<Props> = ({ description, lang, meta, title }) => {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta!)}
+      ]
+        .concat(
+          image
+            ? [
+                { property: 'og:image', content: image },
+                { name: 'twitter:image', content: image },
+              ]
+            : []
+        )
+        .concat(meta!)}
+      link={[
+        {
+          rel: `canonical`,
+          href: site.siteMetadata.siteUrl,
+        },
+      ]}
     />
   );
 };
@@ -93,6 +119,7 @@ BlogSEO.defaultProps = {
   lang: `en`,
   meta: [] as Meta[],
   description: ``,
+  image: `https://repository-images.githubusercontent.com/282072592/9a7d9900-5d63-11eb-8990-8d8e7c39f88d`,
 };
 
 export default BlogSEO;
