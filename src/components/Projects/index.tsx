@@ -37,9 +37,7 @@ const Projects: React.FC = () => {
           subtitle
         }
       }
-      allMdx(
-        filter: { frontmatter: { category: { eq: "projects" } } }
-      ) {
+      allMdx(filter: { frontmatter: { category: { eq: "projects" } } }) {
         edges {
           node {
             id
@@ -62,7 +60,7 @@ const Projects: React.FC = () => {
   `);
 
   const sectionTitle: SectionTitle = mdx.frontmatter;
-  const testimonials: Project[] = allMdx.edges;
+  const projects: Project[] = allMdx.edges;
 
   return (
     <Container section>
@@ -72,25 +70,26 @@ const Projects: React.FC = () => {
         center
       />
       <Styled.Projects>
-        {testimonials.map((item) => {
-          const {
-            id,
-            body,
-            frontmatter: { cover, title, link },
-          } = item.node;
-
-          return (
-            <Styled.Project key={id}>
-              <Styled.Image>
-                <Img fluid={cover.childImageSharp.fluid} alt={title} />
-              </Styled.Image>
-              <a href={link} rel="noopener noreferrer" target="_blank">
-                <Styled.Title>{title}</Styled.Title>
-              </a>
-              <FormatHtml content={body} />
-            </Styled.Project>
-          );
-        })}
+        <Carousel>
+          {projects.map((item) => {
+            const {
+              id,
+              body,
+              frontmatter: { cover, title, link },
+            } = item.node;
+            return (
+              <Styled.Project key={id}>
+                <Styled.Image>
+                  <Img fluid={cover.childImageSharp.fluid} alt={title} />
+                </Styled.Image>
+                <a href={link} rel="noopener noreferrer" target="_blank">
+                  <Styled.Title>{title}</Styled.Title>
+                </a>
+                <FormatHtml content={body} />
+              </Styled.Project>
+            );
+          })}
+        </Carousel>
       </Styled.Projects>
     </Container>
   );

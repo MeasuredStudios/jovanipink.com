@@ -1,8 +1,8 @@
 ---
 category: 'projects'
-cover: './testimonial-2.jpg'
-title: 'My What'
-link: 'https://www.measuredstudios.com/'
+cover: './project-2.jpg'
+title: 'Awesome NBA Data'
+link: 'https://www.orlandoservicerelief.com/'
 ---
 
-I enjoy challenges and teamwork with a high interest in developing products, data analytics, and stories. I assist in creating quality reports and visualizations with D3.js and Tableau. I play with data in Excel, SQL, and Python.
+Practicing new methods in Analysis, Visualization, and Data Science .. #NBA #stats & #data are a great resource. Heavy data cleansing, wrangling, and preparation with Python, Pandas, and SQL for historical and predictive analysis. Applied statistical modeling through machine learning algorithms (Random Forest, Logistic Regression, and Neural Networking) to identify key performance indicators that contribute to winning basketball games.

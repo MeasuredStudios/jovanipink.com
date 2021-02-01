@@ -4,7 +4,7 @@ import Layout from 'components/Layout';
 import SEO from 'components/SEO';
 import HeroBanner from 'components/HeroBanner';
 import Services from 'components/Services';
-import Projects from 'components/Projects';
+import About from 'components/About';
 
 const IndexPage: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ const IndexPage: React.FC = () => {
       <HeroBanner />
       <Services />
       <hr />
-      <Projects />
+      <About />
     </Layout>
   );
 };

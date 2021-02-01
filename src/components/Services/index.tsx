@@ -30,7 +30,10 @@ const Services: React.FC = () => {
           subtitle
         }
       }
-      allMdx(filter: { frontmatter: { category: { eq: "services" } } }, sort: { fields: fileAbsolutePath }) {
+      allMdx(
+        filter: { frontmatter: { category: { eq: "services" } } }
+        sort: { fields: fileAbsolutePath }
+      ) {
         edges {
           node {
             id
@@ -50,12 +53,16 @@ const Services: React.FC = () => {
 
   return (
     <Container section>
-      <TitleSection title={sectionTitle.title} subtitle={sectionTitle.subtitle} center />
+      <TitleSection
+        title={sectionTitle.title}
+        subtitle={sectionTitle.subtitle}
+        center
+      />
       <Styled.Services>
         {services.map((item) => {
           const {
             id,
-            frontmatter: { title, icon, description }
+            frontmatter: { title, icon, description },
           } = item.node;
 
           return (

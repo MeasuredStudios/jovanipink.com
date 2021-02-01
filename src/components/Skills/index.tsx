@@ -28,7 +28,10 @@ const Skills: React.FC = () => {
           subtitle
         }
       }
-      allMdx(filter: { frontmatter: { category: { eq: "skills" } } }, sort: { fields: fileAbsolutePath }) {
+      allMdx(
+        filter: { frontmatter: { category: { eq: "skills" } } }
+        sort: { fields: fileAbsolutePath }
+      ) {
         edges {
           node {
             id
@@ -47,12 +50,16 @@ const Skills: React.FC = () => {
 
   return (
     <Container section>
-      <TitleSection title={sectionTitle.title} subtitle={sectionTitle.subtitle} center />
+      <TitleSection
+        title={sectionTitle.title}
+        subtitle={sectionTitle.subtitle}
+        center
+      />
       <Styled.Skills>
         {skills.map((item) => {
           const {
             id,
-            frontmatter: { title, percentage }
+            frontmatter: { title, percentage },
           } = item.node;
 
           return (

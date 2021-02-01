@@ -34,10 +34,17 @@ const Newsletter: React.FC = () => {
   return (
     <Styled.Newsletter>
       <Container section>
-        <TitleSection title={newsletter.title} subtitle={newsletter.subtitle} center />
+        <TitleSection
+          title={newsletter.title}
+          subtitle={newsletter.subtitle}
+          center
+        />
         <Styled.Form>
           <Styled.Input type="text" placeholder={newsletter.namePlaceholder} />
-          <Styled.Input type="email" placeholder={newsletter.emailPlaceholder} />
+          <Styled.Input
+            type="email"
+            placeholder={newsletter.emailPlaceholder}
+          />
           <Button primary block>
             {newsletter.submitPlaceholder}
           </Button>

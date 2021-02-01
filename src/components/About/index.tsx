@@ -1,7 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import Loadable from '@loadable/component';
 
 import Container from 'components/ui/Container';
 import TitleSection from 'components/ui/TitleSection';
@@ -11,9 +10,7 @@ import { SectionTitle, ImageSharpFluid } from 'helpers/definitions';
 
 import * as Styled from './styles';
 
-const Carousel = Loadable(() => import('components/ui/Carousel'));
-
-interface Testimonial {
+interface About {
   node: {
     id: string;
     body: string;
@@ -28,20 +25,16 @@ interface Testimonial {
   };
 }
 
-const Testimonials: React.FC = () => {
+const About: React.FC = () => {
   const { mdx, allMdx } = useStaticQuery(graphql`
     query {
-      mdx(
-        frontmatter: { category: { eq: "testimonials section" } }
-      ) {
+      mdx(frontmatter: { category: { eq: "about section" } }) {
         frontmatter {
           title
           subtitle
         }
       }
-      allMdx(
-        filter: { frontmatter: { category: { eq: "testimonials" } } }
-      ) {
+      allMdx(filter: { frontmatter: { category: { eq: "about" } } }) {
         edges {
           node {
             id
@@ -63,7 +56,7 @@ const Testimonials: React.FC = () => {
   `);
 
   const sectionTitle: SectionTitle = mdx.frontmatter;
-  const testimonials: Testimonial[] = allMdx.edges;
+  const testimonials: About[] = allMdx.edges;
 
   return (
     <Container section>
@@ -72,29 +65,27 @@ const Testimonials: React.FC = () => {
         subtitle={sectionTitle.subtitle}
         center
       />
-      <Styled.Testimonials>
-        <Carousel>
-          {testimonials.map((item) => {
-            const {
-              id,
-              body,
-              frontmatter: { cover, title },
-            } = item.node;
+      <Styled.About>
+        {testimonials.map((item) => {
+          const {
+            id,
+            body,
+            frontmatter: { cover, title },
+          } = item.node;
 
-            return (
-              <Styled.Testimonial key={id}>
-                <Styled.Image>
-                  <Img fluid={cover.childImageSharp.fluid} alt={title} />
-                </Styled.Image>
-                <Styled.Title>{title}</Styled.Title>
-                <FormatHtml content={body} />
-              </Styled.Testimonial>
-            );
-          })}
-        </Carousel>
-      </Styled.Testimonials>
+          return (
+            <Styled.AboutItem key={id}>
+              <Styled.Image>
+                <Img fluid={cover.childImageSharp.fluid} alt={title} />
+              </Styled.Image>
+              <Styled.Title>{title}</Styled.Title>
+              <FormatHtml content={body} />
+            </Styled.AboutItem>
+          );
+        })}
+      </Styled.About>
     </Container>
   );
 };
 
-export default Testimonials;
+export default About;

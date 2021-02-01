@@ -1,5 +1,5 @@
 ---
 category: 'projects section'
-title: 'About'
-subtitle: 'WHO I AM'
+title: 'Projects'
+subtitle: 'I need data so click away!'
 ---

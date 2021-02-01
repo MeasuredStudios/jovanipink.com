@@ -6,7 +6,7 @@ export const Projects = styled.div`
 `;
 
 export const Project = styled.div`
-  ${tw`flex flex-col items-start mt-4`};
+  ${tw`flex flex-col items-center text-center mt-4`};
 `;
 
 export const Image = styled.figure`
