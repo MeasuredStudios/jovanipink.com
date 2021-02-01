@@ -6,6 +6,7 @@ module.exports = {
     keywords:
       'JovaniPink, Jovani Pink, Product Manager, Product Development, Product Owner, Product Management, Product Marketing, Project Management, Scrum, Agile​',
     siteUrl: 'https://www.jovanipink.com',
+    image: `/jovanirosado.png`,
     social: {
       twitter: `@JovaniPink`,
     },

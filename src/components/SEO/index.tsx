@@ -35,6 +35,7 @@ const BlogSEO: React.FC<Props> = ({
             title
             description
             siteUrl
+            image
             keywords
             author
             social {
@@ -62,7 +63,8 @@ const BlogSEO: React.FC<Props> = ({
         },
         {
           name: `keywords`,
-          content: site.siteMetadata.keywords.join(','),
+          content:
+            'JovaniPink, Jovani Pink, Product Manager, Product Development, Product Owner, Product Management, Product Marketing, Project Management, Scrum, Agile​',
         },
         {
           'http-equiv': `content-language`,
@@ -73,16 +75,28 @@ const BlogSEO: React.FC<Props> = ({
           content: title,
         },
         {
-          property: `og:url`,
-          content: `site.siteMetadata.siteUrl`,
-        },
-        {
           property: `og:description`,
           content: metaDescription,
         },
         {
+          property: `og:url`,
+          content: `site.siteMetadata.siteUrl`,
+        },
+        {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:site_name`,
+          content: `Jovani Pink`,
+        },
+        {
+          property: `og:image:alt`,
+          content: `An image of an open notebook with a drawn graph.`,
+        },
+        {
+          property: `og:locale`,
+          content: `en_US`,
         },
         {
           name: `twitter:card`,
@@ -104,16 +118,23 @@ const BlogSEO: React.FC<Props> = ({
           name: `twitter:description`,
           content: metaDescription,
         },
-      ]
-        .concat(
-          image
-            ? [
-                { property: 'og:image', content: image },
-                { name: 'twitter:image', content: image },
-              ]
-            : []
-        )
-        .concat(meta!)}
+        {
+          property: 'og:image',
+          content: `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`,
+        },
+        {
+          name: 'twitter:image',
+          content: `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`,
+        },
+        {
+          property: `twitter:image:alt`,
+          content: `An image of an open notebook with a drawn graph.`,
+        },
+        {
+          property: `twitter:url`,
+          content: `site.siteMetadata.siteUrl`,
+        },
+      ].concat(meta!)}
       link={[
         {
           rel: `canonical`,
