@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 interface Props {
@@ -6,12 +6,6 @@ interface Props {
 }
 
 const FormatHtml: React.FC<Props> = ({ content }) => (
-  // <span
-  //   className="format-html"
-  //   dangerouslySetInnerHTML={{
-  //     __html: content,
-  //   }}
-  // />
   <MDXRenderer>{content}</MDXRenderer>
 );
 

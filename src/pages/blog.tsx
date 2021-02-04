@@ -1,13 +1,13 @@
 import React from 'react';
 
 import Layout from 'components/Layout';
-import SEO from 'components/SEO';
+import BlogSEO from 'components/BlogSEO';
 import Posts from 'components/Posts';
 
 const BlogPage: React.FC = () => {
   return (
     <Layout>
-      <SEO title="Blog" />
+      <BlogSEO title="Blog" />
       <Posts />
     </Layout>
   );

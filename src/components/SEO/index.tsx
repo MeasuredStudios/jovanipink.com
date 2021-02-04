@@ -20,7 +20,7 @@ interface Props {
   image?: string;
 }
 
-const BlogSEO: React.FC<Props> = ({
+const SEO: React.FC<Props> = ({
   description,
   lang,
   meta,
@@ -132,7 +132,7 @@ const BlogSEO: React.FC<Props> = ({
         },
         {
           property: `twitter:url`,
-          content: `site.siteMetadata.siteUrl`,
+          content: site.siteMetadata.siteUrl,
         },
       ].concat(meta!)}
       link={[
@@ -145,11 +145,11 @@ const BlogSEO: React.FC<Props> = ({
   );
 };
 
-BlogSEO.defaultProps = {
+SEO.defaultProps = {
   lang: `en`,
   meta: [] as Meta[],
   description: ``,
   image: `https://repository-images.githubusercontent.com/282072592/9a7d9900-5d63-11eb-8990-8d8e7c39f88d`,
 };
 
-export default BlogSEO;
+export default SEO;

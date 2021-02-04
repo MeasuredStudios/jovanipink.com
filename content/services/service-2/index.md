@@ -1,6 +1,6 @@
 ---
 category: 'services'
-title: 'Data Engineering'
-icon: 'draw-polygon'
-description: 'Building automated data pipelines to support analytics, reporting, and machine learning data science… with Python.'
+title: 'Data Analytics'
+icon: 'laptop-code'
+description: 'I try to understand the ins and outs of business processes and look at problems with healthy suspicion and curiosity.'
 ---

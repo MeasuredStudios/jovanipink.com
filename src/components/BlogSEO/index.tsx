@@ -33,8 +33,10 @@ const BlogSEO: React.FC<Props> = ({
         site {
           siteMetadata {
             title
-            siteUrl
             description
+            siteUrl
+            image
+            keywords
             author
             social {
               twitter
@@ -46,6 +48,7 @@ const BlogSEO: React.FC<Props> = ({
   );
 
   const metaDescription = description || site.siteMetadata.description;
+  const metaImage = `${site.siteMetadata.siteUrl}${image["publicURL"]}` || `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`;
 
   return (
     <Helmet
@@ -60,32 +63,53 @@ const BlogSEO: React.FC<Props> = ({
           content: metaDescription,
         },
         {
-          name: `description`,
-          content: metaDescription,
+          name: `keywords`,
+          content:
+            'JovaniPink, Jovani Pink, Product Manager, Product Development, Product Owner, Product Management, Product Marketing, Project Management, Scrum, Agile​',
+        },
+        {
+          'http-equiv': `content-language`,
+          content: `en-us`,
         },
         {
           property: `og:title`,
           content: title,
         },
         {
-          property: `og:url`,
-          content: `site.siteMetadata.siteUrl`,
-        },
-        {
           property: `og:description`,
           content: metaDescription,
+        },
+        {
+          property: `og:url`,
+          content: `site.siteMetadata.siteUrl`,
         },
         {
           property: `og:type`,
           content: `website`,
         },
         {
+          property: `og:site_name`,
+          content: `Jovani Pink`,
+        },
+        {
+          property: `og:image:alt`,
+          content: `An image of an open notebook with a drawn graph.`,
+        },
+        {
+          property: `og:locale`,
+          content: `en_US`,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
         {
+          name: `twitter:site`,
+          content: site.siteMetadata.social.twitter,
+        },
+        {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: site.siteMetadata.social.twitter,
         },
         {
           name: `twitter:title`,
@@ -95,16 +119,23 @@ const BlogSEO: React.FC<Props> = ({
           name: `twitter:description`,
           content: metaDescription,
         },
-      ]
-        .concat(
-          image
-            ? [
-                { property: 'og:image', content: image },
-                { name: 'twitter:image', content: image },
-              ]
-            : []
-        )
-        .concat(meta!)}
+        {
+          property: 'og:image',
+          content: metaImage,
+        },
+        {
+          name: 'twitter:image',
+          content: metaImage,
+        },
+        {
+          property: `twitter:image:alt`,
+          content: `An image of an open notebook with a drawn graph.`,
+        },
+        {
+          property: `twitter:url`,
+          content: site.siteMetadata.siteUrl,
+        },
+      ].concat(meta!)}
       link={[
         {
           rel: `canonical`,

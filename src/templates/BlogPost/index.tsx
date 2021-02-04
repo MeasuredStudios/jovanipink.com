@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Link from 'gatsby-link';
+import { MDXProvider } from '@mdx-js/react';
 
 import Layout from 'components/Layout';
 import BlogSEO from 'components/BlogSEO';
@@ -18,6 +19,7 @@ interface Post {
   frontmatter: {
     title: string;
     date: string;
+    cover: string;
   };
 }
 
@@ -38,13 +40,15 @@ const BlogPost: React.FC<Props> = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <BlogSEO title={post.frontmatter.title} />
+      <BlogSEO title={post.frontmatter.title} image={post.frontmatter.cover} />
       <Container section>
         <TitleSection
           title={post.frontmatter.date}
           subtitle={post.frontmatter.title}
         />
-        <FormatHtml content={post.body} />
+        <MDXProvider>
+          <FormatHtml content={post.body} />
+        </MDXProvider>
         <Styled.Links>
           <span>
             {previous && (
@@ -75,6 +79,9 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MMM DD, YYYY")
+        cover {
+          publicURL
+        }
       }
     }
   }
