@@ -84,7 +84,7 @@
     "@types/eslint": "7.2.6",
     "@types/eslint-plugin-prettier": "3.1.0",
     "@types/jest": "26.0.19",
-    "@types/node": "13.13.36",
+    "@types/node": "13.13.41",
     "@types/prettier": "2.1.5",
     "@types/prop-types": "15.7.3",
     "@types/react": "17.0.1",
