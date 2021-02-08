@@ -3,9 +3,10 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
+    // devtool: 'eval-source-map',
     resolve: {
-      modules: [path.resolve(__dirname, `src`), `node_modules`]
-    }
+      modules: [path.resolve(__dirname, `src`), `node_modules`],
+    },
   });
 };
 
@@ -17,7 +18,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value
+      value,
     });
   }
 };
@@ -58,8 +59,8 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         slug: `${post.node.fields.slug}`,
         previous,
-        next
-      }
+        next,
+      },
     });
   });
 };
