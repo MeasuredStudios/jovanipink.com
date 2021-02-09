@@ -10,6 +10,7 @@ import TitleSection from 'components/ui/TitleSection';
 import FormatHtml from 'components/utils/FormatHtml';
 
 import * as Styled from './styles';
+import components from './mdx';
 
 interface Post {
   body: React.ReactNode;
@@ -46,7 +47,7 @@ const BlogPost: React.FC<Props> = ({ data, pageContext }) => {
           title={post.frontmatter.date}
           subtitle={post.frontmatter.title}
         />
-        <MDXProvider>
+        <MDXProvider components={components}>
           <FormatHtml content={post.body} />
         </MDXProvider>
         <Styled.Links>
