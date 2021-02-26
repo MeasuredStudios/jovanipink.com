@@ -1,5 +1,8 @@
 module.exports = {
   theme: {
+    fontFamily: {
+      serif: ['Source Sans Pro', 'sans-serif'],
+    },
     extend: {
       colors: {
         theme: {
@@ -12,8 +15,8 @@ module.exports = {
           850: '#3f67eb',
         },
         complementary: {
-          450: '#f2d884'
-        }
+          450: '#f2d884',
+        },
       },
     },
   },

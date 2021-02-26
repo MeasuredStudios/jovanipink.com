@@ -1,7 +1,11 @@
 import React from 'react';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import {
+  fab,
+  faLinkedinIn,
+  faTwitter,
+} from '@fortawesome/free-brands-svg-icons';
 import {
   faLaptopCode,
   faDrawPolygon,
@@ -9,6 +13,7 @@ import {
   faBullhorn,
   faMapMarkerAlt,
   faPhone,
+  faInbox,
   faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -26,8 +31,10 @@ library.add(
   faBullhorn,
   faMapMarkerAlt,
   faPhone,
+  faInbox,
   faPaperPlane,
-  faLinkedinIn
+  faLinkedinIn,
+  faTwitter
 );
 
 export type IconProps = any;

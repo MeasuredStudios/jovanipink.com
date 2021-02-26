@@ -1,4 +1,10 @@
 const components = {
+  h1: {
+    '@apply mt-16 mb-4 text-gray-900 leading-none font-normal text-2xl': {},
+  },
+  h2: {
+    '@apply mt-16 mb-4 text-gray-900 leading-none font-normal text-2xl': {},
+  },
   '.markdown': {
     '@apply text-gray-700 leading-normal': {},
     '> *:first-child': {

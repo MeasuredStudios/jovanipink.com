@@ -67,7 +67,7 @@ const ConctactInfo: React.FC = () => {
 
         return (
           <Styled.ContactInfoItem key={id}>
-            <InfoBlock icon={linkFix} title={title} content={content} center />
+            <InfoBlock icon={icon} title={title} content={content} center />
           </Styled.ContactInfoItem>
         );
       })}

@@ -11,9 +11,9 @@ import Education from 'components/Education';
 const ResumePage: React.FC = () => (
   <Layout>
     <SEO title="Resume" />
-    <Projects />
-    <hr />
     <Skills />
+    <hr />
+    <Projects />
     <hr />
     <Experience />
     <hr />

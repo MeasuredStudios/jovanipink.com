@@ -1,5 +1,5 @@
 ---
 category: 'skills'
-title: 'JavaScript'
-percentage: 92
+title: 'Python'
+percentage: 54
 ---
