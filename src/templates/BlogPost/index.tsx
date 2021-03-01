@@ -47,7 +47,7 @@ const BlogPost: React.FC<Props> = ({ data, pageContext }) => {
           title={post.frontmatter.date}
           subtitle={post.frontmatter.title}
         />
-        <MDXProvider components={components}>
+        <MDXProvider>
           <FormatHtml content={post.body} />
         </MDXProvider>
         <Styled.Links>
