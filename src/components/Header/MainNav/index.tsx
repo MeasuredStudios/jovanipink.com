@@ -9,7 +9,7 @@ interface MainNavItem {
 
 const mainNavItems: MainNavItem[] = [
   {
-    title: 'About Me',
+    title: 'About',
     slug: '/',
   },
   {
@@ -21,7 +21,7 @@ const mainNavItems: MainNavItem[] = [
     slug: '/blog/',
   },
   {
-    title: 'Contact Me',
+    title: 'Contact',
     slug: '/contact/',
   },
 ];
