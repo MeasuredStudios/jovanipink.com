@@ -9,3 +9,5 @@ published: true
 ---
 
 _"Enhancing Tableau Data Queries" on YouTube mentioned Tableau Log Viewer (tlv) and I'm hooked._.
+
+## Tableau log Viewer and performance.

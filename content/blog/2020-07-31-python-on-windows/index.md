@@ -2,15 +2,15 @@
 category: 'blog'
 cover: './cover.jpg'
 title: 'Python on Windows'
-description: 'Sharing my current Python Dev Env for Win 10.'
+description: 'Sharing my current Python Dev Env for Win 10'
 date: '2020-07-31'
 tags: ['Python', 'Windows', 'Dev Setup']
-published: true
+published: false
 ---
 
-## Python on Windows
+_The opinionated and easiest way to fully install a Python Dev Env on Windows 10 for Data Analysis_.
 
-> The opinionated and easiest way to fully install a Python Dev Env on Windows 10 for Data Analysis.
+## Python on Windows
 
 ## Table of Contents
 
