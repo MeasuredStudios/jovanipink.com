@@ -44,7 +44,7 @@
     "@mdx-js/react": "1.6.22",
     "@types/loadable__component": "5.13.3",
     "babel-plugin-styled-components": "1.12.0",
-    "framer-motion": "3.10.2",
+    "framer-motion": "3.10.5",
     "gatsby": "3.0.4",
     "gatsby-image": "3.0.0",
     "gatsby-plugin-google-analytics": "3.0.0",
