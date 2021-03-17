@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import Container from 'components/ui/Container';
 import TitleSection from 'components/ui/TitleSection';
 
-import { SectionTitle, ImageSharpFluid } from 'helpers/definitions';
+import { SectionTitle, ImageSharpFluid } from 'tailwind.macro';
 
 import * as Styled from './styles';
 

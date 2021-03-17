@@ -6,7 +6,7 @@ import Container from 'components/ui/Container';
 import TitleSection from 'components/ui/TitleSection';
 import FormatHtml from 'components/utils/FormatHtml';
 
-import { SectionTitle } from 'helpers/definitions';
+import { SectionTitle } from 'tailwind.macro';
 
 interface Education {
   node: {
@@ -55,13 +55,16 @@ const Education: React.FC = () => {
 
   return (
     <Container section>
-      <TitleSection title={sectionTitle.title} subtitle={sectionTitle.subtitle} />
+      <TitleSection
+        title={sectionTitle.title}
+        subtitle={sectionTitle.subtitle}
+      />
 
       {education.map((item) => {
         const {
           id,
           body,
-          frontmatter: { university, degree, startDate, endDate }
+          frontmatter: { university, degree, startDate, endDate },
         } = item.node;
 
         return (

@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Container from 'components/ui/Container';
 import Button from 'components/ui/Button';
 import TitleSection from 'components/ui/TitleSection';
-import { SectionTitle } from 'helpers/definitions';
+import { SectionTitle } from 'tailwind.macro';
 
 import * as Styled from './styles';
 

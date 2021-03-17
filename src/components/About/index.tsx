@@ -6,7 +6,7 @@ import Container from 'components/ui/Container';
 import TitleSection from 'components/ui/TitleSection';
 import FormatHtml from 'components/utils/FormatHtml';
 
-import { SectionTitle, ImageSharpFluid } from 'helpers/definitions';
+import { SectionTitle, ImageSharpFluid } from 'tailwind.macro';
 
 import * as Styled from './styles';
 

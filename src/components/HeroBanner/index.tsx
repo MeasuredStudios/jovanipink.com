@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import Banner from 'components/ui/Banner';
 
-import { SectionTitle } from 'helpers/definitions';
+import { SectionTitle } from 'tailwind.macro';
 
 interface SectionHeroBanner extends SectionTitle {
   content: string;

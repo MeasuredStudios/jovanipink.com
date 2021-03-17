@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 
 import * as Styled from './styles';
 
-import { ImageSharpFluid } from 'helpers/definitions';
+import { ImageSharpFluid } from 'tailwind.macro';
 
 const Logo: React.FC = () => {
   const { site, placeholderImage } = useStaticQuery(graphql`
