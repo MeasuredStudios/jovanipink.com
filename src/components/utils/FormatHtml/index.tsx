@@ -6,7 +6,9 @@ interface Props {
 }
 
 const FormatHtml: React.FC<Props> = ({ content }) => (
-  <MDXRenderer>{content}</MDXRenderer>
+  <article className="markdown">
+    <MDXRenderer>{content}</MDXRenderer>
+  </article>
 );
 
 export default FormatHtml;

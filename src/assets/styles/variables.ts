@@ -1,4 +1,4 @@
-import { ObjectType } from 'helpers/definitions';
+import { ObjectType } from '../../tailwind.macro';
 
 /**
  * ----------------------------------------
